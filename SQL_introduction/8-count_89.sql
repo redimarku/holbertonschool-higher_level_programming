@@ -1,1 +1,3 @@
 -- script to list all databases
+
+SELECT COUNT(*) FROM first_table WHERE id=89;
