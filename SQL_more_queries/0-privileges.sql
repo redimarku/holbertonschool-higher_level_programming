@@ -1,11 +1,20 @@
--- write a script that print all privileges of user : user_0d_1
--- create users 
-CREATE USER 'user_0d_1'@'localhost';
-CREATE USER 'user_0d_2'@'localhost';
+-- Create user_0d_1 if it does not exist
+CREATE USER IF NOT EXISTS 'user_0d_1'@'localhost';
 
--- grant users privileges
+-- Create user_0d_2 if it does not exist
+CREATE USER IF NOT EXISTS 'user_0d_2'@'localhost';
+
+-- Grant all privileges on all databases and tables to user_0d_1
 GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost';
 
+-- Grant all privileges on all databases and tables to user_0d_2
+GRANT ALL PRIVILEGES ON *.* TO 'user_0d_2'@'localhost';
+
+-- Make the privilege changes active
+FLUSH PRIVILEGES;
+
+-- Show all privileges for user_0d_1
 SHOW GRANTS FOR 'user_0d_1'@'localhost';
--- write a script that print all privileges of user : user_0d_2
+
+-- Show all privileges for user_0d_2
 SHOW GRANTS FOR 'user_0d_2'@'localhost';
