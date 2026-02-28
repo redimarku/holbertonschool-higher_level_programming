@@ -1,4 +1,4 @@
--- script to list all databases
+-- lists all cities of California
 
 SELECT *
 FROM cities
