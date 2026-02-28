@@ -1,6 +1,6 @@
 -- script to list all databases
 
-SELECT name
+SELECT *
 FROM cities
 WHERE state_id = (
   SELECT id
