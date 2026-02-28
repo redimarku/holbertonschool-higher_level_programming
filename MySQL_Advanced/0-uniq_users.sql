@@ -1,4 +1,4 @@
--- creates the table users with constraints
+-- creates the table users
 
 CREATE TABLE IF NOT EXISTS users (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
